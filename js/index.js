@@ -1,3 +1,22 @@
+const menuToggleInput = document.querySelector('#menu-toggle input')
+const checkbox = document.querySelector('input')
+const navMenu = document.querySelector('ul')
+
+menuToggleInput.addEventListener("click", () => {
+    
+    if (checkbox.checked){
+        navMenu.style.transform = 'translate(0)'
+        navMenu.style.display = 'flex'
+    } else {
+        navMenu.style.display = 'none'
+    }
+
+    // Toggle the bar animations
+    document.getElementById("bar1").classList.toggle("rotate-45");
+    document.getElementById("bar2").classList.toggle("hide");
+    document.getElementById("bar3").classList.toggle("rotate-135");
+});
+
 const slider = document.getElementById("slider");
 const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
@@ -91,23 +110,4 @@ messageUs.addEventListener('click', function() {
     "Tanggal lahir : " + tanggalLahir + "<br>" + "jenis kelamin : " + jenisKelamin + "<br>" + "Pesan : " + pesan;
 
     output.innerHTML = output.textContent;
-});
-
-
-const menuToggleInput = document.querySelector('#menu-toggle input')
-const checkbox = document.querySelector('input')
-const navMenu = document.querySelector('ul')
-
-menuToggleInput.addEventListener("click", () => {
-    
-    if (checkbox.checked){
-        navMenu.style.transform = 'translate(0)'
-    } else {
-        navMenu.style.transform = 'translate(100%)'
-    }
-
-    // Toggle the bar animations
-    document.getElementById("bar1").classList.toggle("rotate-45");
-    document.getElementById("bar2").classList.toggle("hide");
-    document.getElementById("bar3").classList.toggle("rotate-135");
 });
